@@ -11,3 +11,6 @@ Script to globally fit Hill equation (dose response curve) to a triplicate and d
 Script to rebalance your particle stack after 3D reconstruction. Runs in the cryosparcm icli python interpreter. Of course this requires the low abundance particles to be actual particles otherwise it will do more harm than good. Requires pyem.
 
 <img src="https://user-images.githubusercontent.com/106915051/236044282-c9a51190-6e0f-45ac-8299-32ef726ba4aa.png" width="800">
+
+# extract_tls.py
+Script to extract TLS group definitions from PDB header as written out by Phenix.refine into REFMAC format. Requires CCP4. This fixes the inability of ccp4 to read the TLS atom selection.
