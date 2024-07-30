@@ -18,7 +18,7 @@ def parse_pdb(filename):
     refmac_output = []
     buster_output = []
     chain_count = {}
-    
+
     for i in range(len(lines)):
         if lines[i].startswith("REMARK   3   TLS GROUP :"):
             if i+1 < len(lines) and lines[i+1].startswith("REMARK   3    SELECTION:"):
@@ -46,7 +46,7 @@ def parse_pdb(filename):
     return refmac_output,buster_output
 
 # Parse the pdb file
-parsed_output = parse_pdb(args.pdb_file)
+refmac_output,buster_output = parse_pdb(args.pdb_file)
 
 # Read the output.tls file
 with open('output.tls', 'r') as file:
@@ -56,8 +56,8 @@ with open('output.tls', 'r') as file:
 j=0
 for i in range(len(tls_lines)):
     if tls_lines[i] == "RANGE  ''' ALL\n":
-            if j < len(parsed_output):
-                tls_lines[i] = parsed_output[j] + '\n'
+            if j < len(refmac_output):
+                tls_lines[i] = refmac_output[j] + '\n'
                 j += 1
 
 # Write the updated lines to output_refmac.tls
@@ -65,6 +65,6 @@ with open('output_refmac.tls', 'w') as file:
     file.writelines(tls_lines)
 
 # Write the secondary output to output_buster.tls
-with open('output_refmac.tls', 'w') as file:
+with open('output_buster.tls', 'w') as file:
     for line in buster_output:
         file.write(line + '\n')
