@@ -14,4 +14,4 @@ Script to rebalance your particle stack after 3D reconstruction. Runs in the cry
 
 # extract_tls.py
 Script to extract TLS group definitions from PDB header as written out by Phenix.refine into REFMAC format. Requires CCP4. This fixes the inability of ccp4 to read the TLS atom selection. Also writes out a gelly style TLS group definition for Buster.
-extract_tls.py ./location/of/input/pdb.pdb
+> extract_tls.py ./location/of/input/pdb.pdb
