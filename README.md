@@ -8,9 +8,8 @@ Can also do simple reference correction.
 -  single: none and assumes last tip is reference
 -  double: single and assumes second half of measurements are reference
 
-<img src="https://user-images.githubusercontent.com/106915051/236044282-c9a51190-6e0f-45ac-8299-32ef726ba4aa.png" width="800">
+<img src="https://github.com/user-attachments/assets/efd96094-5272-49da-970e-3cc1cefc8ee0" width="800">
   
-
 # m8_to_fasta_aln.py
 Script that converts m8 alignment file from Foldseek (https://search.foldseek.com/search) and converts it into an aligned .fasta. Takes a few minutes to run on a few hundred sequences. Rough around the edges but works.
 
