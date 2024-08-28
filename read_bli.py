@@ -143,7 +143,7 @@ def plot_decoded_data(df,coln,concentrations):
     fig.show()
 
 ## Example usage
-folder_path = r'C:\Users\ybloch\Documents\Unief\IL31\20220609 hIL31 wt NiNTA vs IL31r d1d2 80nM xfold dref'
+folder_path = r'C:\path\to\bli\result\folder'
 df,concentrations = create_dataframe(folder_path)
 
 bg = "double"  # Change this to "none", "single", or "double" as needed, it will always set the last part of the first baseline to zero
